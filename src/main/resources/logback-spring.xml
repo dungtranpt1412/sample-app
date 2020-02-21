@@ -1,0 +1,30 @@
+<configuration>
+	<!-- CONSOLE -->
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+		</encoder>
+  	</appender>
+
+  	<!-- LOG FILE -->
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_FILE}.log</file>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<!-- yamlのrolling-file-nameだとFixedWindowRollingPolicyが走りエラーが発生する -->
+			<fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>7</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+  	</appender>
+
+  	<!-- LOG LEVEL -->
+	<!-- ここで出力対象を指定しないとログの一切が出力されない -->
+	<root>
+		<appender-ref ref="FILE"/>
+		<appender-ref ref="CONSOLE"/>
+	</root>
+</configuration>

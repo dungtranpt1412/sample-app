@@ -1,0 +1,541 @@
+2020-02-21 10:32:18 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Starting DemoApplication on DUNGTA-PC with PID 17388 (D:\NTT_data_workspace\workspace_sample\sample-app\bin\main started by an_dung in D:\NTT_data_workspace\workspace_sample\sample-app)
+2020-02-21 10:32:18 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : The following profiles are active: postgres-local
+2020-02-21 10:32:18 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\an_dung\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.0\c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6\jaxb-runtime-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-core-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-api-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/txw2-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/istack-commons-runtime-3.0.5.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/stax-ex-1.7.8.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/FastInfoset-1.2.13.jar
+2020-02-21 10:32:18 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\an_dung\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-core\2.3.0\b40bc6ae4bc14480204e143377ce6f75ebba5066\jaxb-core-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/jaxb-api-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/txw2-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/istack-commons-runtime-3.0.5.jar
+2020-02-21 10:32:18 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-21 10:32:18 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-21 10:32:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat initialized with port(s): 8080 (http)
+2020-02-21 10:32:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-21 10:32:19 [restartedMain] INFO  o.a.catalina.core.StandardService    : Starting service [Tomcat]
+2020-02-21 10:32:19 [restartedMain] INFO  o.a.catalina.core.StandardEngine     : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-21 10:32:19 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring embedded WebApplicationContext
+2020-02-21 10:32:19 [restartedMain] INFO  o.s.web.context.ContextLoader        : Root WebApplicationContext: initialization completed in 849 ms
+2020-02-21 10:32:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Starting...
+2020-02-21 10:32:21 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool    : HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:280)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:458)
+	at org.postgresql.Driver.connect(Driver.java:260)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0(H2ConsoleAutoConfiguration.java:73)
+	at org.springframework.beans.factory.ObjectProvider.ifAvailable(ObjectProvider.java:93)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:202)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:96)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:85)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:253)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:227)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:459)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at jp.co.nttdmse.DemoApplication.main(DemoApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:608)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:75)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:91)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192)
+	... 78 common frames omitted
+2020-02-21 10:32:21 [restartedMain] INFO  c.g.d.core.DozerBeanMapperBuilder    : Initializing Dozer. Version: 6.5.0, Thread Name: restartedMain
+2020-02-21 10:32:21 [restartedMain] INFO  c.g.d.core.util.RuntimeUtils         : OSGi support is false
+2020-02-21 10:32:21 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2020-02-21 10:32:21 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2020-02-21 10:32:21 [restartedMain] WARN  c.g.d.core.el.ELExpressionFactory    : javax.el is not supported; Failed to resolve ExpressionFactory, com.sun.el.ExpressionFactoryImpl
+2020-02-21 10:32:21 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Using URL [file:/D:/NTT_data_workspace/workspace_sample/sample-app/bin/main/META-INF/dozer/configuration.dozer.xml] to load custom xml mappings
+2020-02-21 10:32:21 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Trying to resolve XML entity with public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 10:32:21 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Resolved public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 10:32:21 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Successfully loaded custom xml mapping.
+2020-02-21 10:32:21 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 10:32:22 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'SC_A01_01_MasterRegisterController' method 
+jp.co.nttdmse.app.controller.SC_A01_01_MasterRegisterController#init(SC_A01_01_MasterRegisterIni)
+to {GET /}: There is already 'employeeInfoController' bean method
+jp.co.nttdmse.app.controller.EmployeeInfoController#init(Model) mapped.
+2020-02-21 10:32:22 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 10:32:22 [restartedMain] INFO  o.a.catalina.core.StandardService    : Stopping service [Tomcat]
+2020-02-21 10:32:22 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-21 10:32:22 [restartedMain] ERROR o.s.boot.SpringApplication           : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'SC_A01_01_MasterRegisterController' method 
+jp.co.nttdmse.app.controller.SC_A01_01_MasterRegisterController#init(SC_A01_01_MasterRegisterIni)
+to {GET /}: There is already 'employeeInfoController' bean method
+jp.co.nttdmse.app.controller.EmployeeInfoController#init(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at jp.co.nttdmse.DemoApplication.main(DemoApplication.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'SC_A01_01_MasterRegisterController' method 
+jp.co.nttdmse.app.controller.SC_A01_01_MasterRegisterController#init(SC_A01_01_MasterRegisterIni)
+to {GET /}: There is already 'employeeInfoController' bean method
+jp.co.nttdmse.app.controller.EmployeeInfoController#init(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:633)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:600)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:350)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 21 common frames omitted
+2020-02-21 10:35:17 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Starting DemoApplication on DUNGTA-PC with PID 11216 (D:\NTT_data_workspace\workspace_sample\sample-app\bin\main started by an_dung in D:\NTT_data_workspace\workspace_sample\sample-app)
+2020-02-21 10:35:17 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : The following profiles are active: postgres
+2020-02-21 10:35:17 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\an_dung\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.0\c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6\jaxb-runtime-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-core-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-api-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/txw2-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/istack-commons-runtime-3.0.5.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/stax-ex-1.7.8.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/FastInfoset-1.2.13.jar
+2020-02-21 10:35:17 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\an_dung\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-core\2.3.0\b40bc6ae4bc14480204e143377ce6f75ebba5066\jaxb-core-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/jaxb-api-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/txw2-2.3.0.jar,file:/C:/Users/an_dung/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/istack-commons-runtime-3.0.5.jar
+2020-02-21 10:35:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-21 10:35:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-21 10:35:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat initialized with port(s): 8080 (http)
+2020-02-21 10:35:18 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-21 10:35:18 [restartedMain] INFO  o.a.catalina.core.StandardService    : Starting service [Tomcat]
+2020-02-21 10:35:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine     : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-21 10:35:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring embedded WebApplicationContext
+2020-02-21 10:35:18 [restartedMain] INFO  o.s.web.context.ContextLoader        : Root WebApplicationContext: initialization completed in 897 ms
+2020-02-21 10:35:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Starting...
+2020-02-21 10:35:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Start completed.
+2020-02-21 10:35:18 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://192.168.4.175:5432/nttdatamse'
+2020-02-21 10:35:18 [restartedMain] INFO  c.g.d.core.DozerBeanMapperBuilder    : Initializing Dozer. Version: 6.5.0, Thread Name: restartedMain
+2020-02-21 10:35:18 [restartedMain] INFO  c.g.d.core.util.RuntimeUtils         : OSGi support is false
+2020-02-21 10:35:18 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2020-02-21 10:35:18 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2020-02-21 10:35:18 [restartedMain] WARN  c.g.d.core.el.ELExpressionFactory    : javax.el is not supported; Failed to resolve ExpressionFactory, com.sun.el.ExpressionFactoryImpl
+2020-02-21 10:35:18 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Using URL [file:/D:/NTT_data_workspace/workspace_sample/sample-app/bin/main/META-INF/dozer/configuration.dozer.xml] to load custom xml mappings
+2020-02-21 10:35:18 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Trying to resolve XML entity with public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 10:35:18 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Resolved public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 10:35:18 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Successfully loaded custom xml mapping.
+2020-02-21 10:35:19 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 10:35:19 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer   : LiveReload server is running on port 35729
+2020-02-21 10:35:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Starting ProtocolHandler ["http-nio-8080"]
+2020-02-21 10:35:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-21 10:35:19 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Started DemoApplication in 1.997 seconds (JVM running for 2.773)
+2020-02-21 21:42:06 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Starting DemoApplication on DESKTOP-I7F9DGF with PID 4148 (F:\workspace\sample-app\bin\main started by dungt in F:\workspace\sample-app)
+2020-02-21 21:42:06 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : The following profiles are active: postgres
+2020-02-21 21:42:06 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\dungt\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.0\c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6\jaxb-runtime-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-core-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-api-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/txw2-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/istack-commons-runtime-3.0.5.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/stax-ex-1.7.8.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/FastInfoset-1.2.13.jar
+2020-02-21 21:42:06 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\dungt\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-core\2.3.0\b40bc6ae4bc14480204e143377ce6f75ebba5066\jaxb-core-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/jaxb-api-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/txw2-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/istack-commons-runtime-3.0.5.jar
+2020-02-21 21:42:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-21 21:42:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-21 21:42:08 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat initialized with port(s): 8080 (http)
+2020-02-21 21:42:08 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-21 21:42:08 [restartedMain] INFO  o.a.catalina.core.StandardService    : Starting service [Tomcat]
+2020-02-21 21:42:08 [restartedMain] INFO  o.a.catalina.core.StandardEngine     : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-21 21:42:09 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring embedded WebApplicationContext
+2020-02-21 21:42:09 [restartedMain] INFO  o.s.web.context.ContextLoader        : Root WebApplicationContext: initialization completed in 2209 ms
+2020-02-21 21:42:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Starting...
+2020-02-21 21:42:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Start completed.
+2020-02-21 21:42:09 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/sample_employee_info'
+2020-02-21 21:42:09 [restartedMain] INFO  c.g.d.core.DozerBeanMapperBuilder    : Initializing Dozer. Version: 6.5.0, Thread Name: restartedMain
+2020-02-21 21:42:10 [restartedMain] INFO  c.g.d.core.util.RuntimeUtils         : OSGi support is false
+2020-02-21 21:42:10 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2020-02-21 21:42:10 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2020-02-21 21:42:10 [restartedMain] WARN  c.g.d.core.el.ELExpressionFactory    : javax.el is not supported; Failed to resolve ExpressionFactory, com.sun.el.ExpressionFactoryImpl
+2020-02-21 21:42:10 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Using URL [file:/F:/workspace/sample-app/bin/main/META-INF/dozer/configuration.dozer.xml] to load custom xml mappings
+2020-02-21 21:42:10 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Trying to resolve XML entity with public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 21:42:10 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Resolved public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 21:42:10 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Successfully loaded custom xml mapping.
+2020-02-21 21:42:10 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 21:42:11 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer   : LiveReload server is running on port 35729
+2020-02-21 21:42:11 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Starting ProtocolHandler ["http-nio-8080"]
+2020-02-21 21:42:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-21 21:42:11 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Started DemoApplication in 5.589 seconds (JVM running for 7.039)
+2020-02-21 21:42:30 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-02-21 21:42:30 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 21:42:30 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Shutdown initiated...
+2020-02-21 21:42:30 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Shutdown completed.
+2020-02-21 21:44:28 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Starting DemoApplication on DESKTOP-I7F9DGF with PID 4136 (F:\workspace\sample-app\bin\main started by dungt in F:\workspace\sample-app)
+2020-02-21 21:44:28 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : The following profiles are active: postgres
+2020-02-21 21:44:28 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\dungt\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.0\c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6\jaxb-runtime-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-core-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-api-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/txw2-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/istack-commons-runtime-3.0.5.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/stax-ex-1.7.8.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/FastInfoset-1.2.13.jar
+2020-02-21 21:44:28 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\dungt\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-core\2.3.0\b40bc6ae4bc14480204e143377ce6f75ebba5066\jaxb-core-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/jaxb-api-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/txw2-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/istack-commons-runtime-3.0.5.jar
+2020-02-21 21:44:28 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-21 21:44:28 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-21 21:44:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat initialized with port(s): 8080 (http)
+2020-02-21 21:44:30 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-21 21:44:30 [restartedMain] INFO  o.a.catalina.core.StandardService    : Starting service [Tomcat]
+2020-02-21 21:44:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine     : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-21 21:44:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring embedded WebApplicationContext
+2020-02-21 21:44:30 [restartedMain] INFO  o.s.web.context.ContextLoader        : Root WebApplicationContext: initialization completed in 1834 ms
+2020-02-21 21:44:30 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Starting...
+2020-02-21 21:44:30 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Start completed.
+2020-02-21 21:44:30 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/sample_employee_info'
+2020-02-21 21:44:31 [restartedMain] INFO  c.g.d.core.DozerBeanMapperBuilder    : Initializing Dozer. Version: 6.5.0, Thread Name: restartedMain
+2020-02-21 21:44:31 [restartedMain] INFO  c.g.d.core.util.RuntimeUtils         : OSGi support is false
+2020-02-21 21:44:31 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2020-02-21 21:44:31 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2020-02-21 21:44:31 [restartedMain] WARN  c.g.d.core.el.ELExpressionFactory    : javax.el is not supported; Failed to resolve ExpressionFactory, com.sun.el.ExpressionFactoryImpl
+2020-02-21 21:44:31 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Using URL [file:/F:/workspace/sample-app/bin/main/META-INF/dozer/configuration.dozer.xml] to load custom xml mappings
+2020-02-21 21:44:31 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Trying to resolve XML entity with public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 21:44:31 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Resolved public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 21:44:31 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Successfully loaded custom xml mapping.
+2020-02-21 21:44:32 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 21:44:32 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer   : LiveReload server is running on port 35729
+2020-02-21 21:44:32 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Starting ProtocolHandler ["http-nio-8080"]
+2020-02-21 21:44:32 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-21 21:44:32 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Started DemoApplication in 4.915 seconds (JVM running for 6.08)
+2020-02-21 21:44:40 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 21:44:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet    : Initializing Servlet 'dispatcherServlet'
+2020-02-21 21:44:40 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet    : Completed initialization in 11 ms
+2020-02-21 21:44:41 [http-nio-8080-exec-1] INFO  j.c.n.d.s.i.EmployeeInfoServiceImpl  : getEmployeeInfoList Start!
+2020-02-21 21:44:45 [http-nio-8080-exec-7] INFO  j.c.n.d.s.i.EmployeeInfoServiceImpl  : getEmployeeInfoList Start!
+2020-02-21 21:46:37 [Thread-7] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 21:46:37 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Shutdown initiated...
+2020-02-21 21:46:37 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Shutdown completed.
+2020-02-21 21:46:37 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Starting DemoApplication on DESKTOP-I7F9DGF with PID 4136 (F:\workspace\sample-app\bin\main started by dungt in F:\workspace\sample-app)
+2020-02-21 21:46:37 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : The following profiles are active: postgres
+2020-02-21 21:46:37 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner  : No MyBatis mapper was found in '[jp.co.nttdmse]' package. Please check your configuration.
+2020-02-21 21:46:37 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry     : The MBean registry cannot be disabled because it has already been initialised
+2020-02-21 21:46:38 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat initialized with port(s): 8080 (http)
+2020-02-21 21:46:38 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-21 21:46:38 [restartedMain] INFO  o.a.catalina.core.StandardService    : Starting service [Tomcat]
+2020-02-21 21:46:38 [restartedMain] INFO  o.a.catalina.core.StandardEngine     : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-21 21:46:38 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring embedded WebApplicationContext
+2020-02-21 21:46:38 [restartedMain] INFO  o.s.web.context.ContextLoader        : Root WebApplicationContext: initialization completed in 488 ms
+2020-02-21 21:46:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-2 - Starting...
+2020-02-21 21:46:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-2 - Start completed.
+2020-02-21 21:46:38 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/sample_employee_info'
+2020-02-21 21:46:38 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeInfoController': Unsatisfied dependency expressed through field 'employeeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeInfoServiceImpl' defined in file [F:\workspace\sample-app\bin\main\jp\co\nttdmse\domain\service\impl\EmployeeInfoServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+2020-02-21 21:46:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-2 - Shutdown initiated...
+2020-02-21 21:46:38 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-2 - Shutdown completed.
+2020-02-21 21:46:38 [restartedMain] INFO  o.a.catalina.core.StandardService    : Stopping service [Tomcat]
+2020-02-21 21:46:38 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-21 21:46:38 [restartedMain] ERROR o.s.boot.SpringApplication           : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeInfoController': Unsatisfied dependency expressed through field 'employeeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeInfoServiceImpl' defined in file [F:\workspace\sample-app\bin\main\jp\co\nttdmse\domain\service\impl\EmployeeInfoServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at jp.co.nttdmse.DemoApplication.main(DemoApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeInfoServiceImpl' defined in file [F:\workspace\sample-app\bin\main\jp\co\nttdmse\domain\service\impl\EmployeeInfoServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312)
+	... 35 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+	at jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl.<init>(EmployeeInfoServiceImpl.java:20)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:200)
+	... 37 common frames omitted
+2020-02-21 21:47:27 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Starting DemoApplication on DESKTOP-I7F9DGF with PID 14188 (F:\workspace\sample-app\bin\main started by dungt in F:\workspace\sample-app)
+2020-02-21 21:47:27 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : The following profiles are active: postgres
+2020-02-21 21:47:27 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\dungt\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.0\c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6\jaxb-runtime-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-core-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-api-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/txw2-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/istack-commons-runtime-3.0.5.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/stax-ex-1.7.8.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/FastInfoset-1.2.13.jar
+2020-02-21 21:47:27 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\dungt\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-core\2.3.0\b40bc6ae4bc14480204e143377ce6f75ebba5066\jaxb-core-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/jaxb-api-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/txw2-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/istack-commons-runtime-3.0.5.jar
+2020-02-21 21:47:27 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-21 21:47:27 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-21 21:47:28 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner  : No MyBatis mapper was found in '[jp.co.nttdmse]' package. Please check your configuration.
+2020-02-21 21:47:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat initialized with port(s): 8080 (http)
+2020-02-21 21:47:28 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-21 21:47:28 [restartedMain] INFO  o.a.catalina.core.StandardService    : Starting service [Tomcat]
+2020-02-21 21:47:28 [restartedMain] INFO  o.a.catalina.core.StandardEngine     : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-21 21:47:28 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring embedded WebApplicationContext
+2020-02-21 21:47:28 [restartedMain] INFO  o.s.web.context.ContextLoader        : Root WebApplicationContext: initialization completed in 1105 ms
+2020-02-21 21:47:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Starting...
+2020-02-21 21:47:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Start completed.
+2020-02-21 21:47:28 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/sample_employee_info'
+2020-02-21 21:47:28 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeInfoController': Unsatisfied dependency expressed through field 'employeeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeInfoServiceImpl' defined in file [F:\workspace\sample-app\bin\main\jp\co\nttdmse\domain\service\impl\EmployeeInfoServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+2020-02-21 21:47:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Shutdown initiated...
+2020-02-21 21:47:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Shutdown completed.
+2020-02-21 21:47:28 [restartedMain] INFO  o.a.catalina.core.StandardService    : Stopping service [Tomcat]
+2020-02-21 21:47:28 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-21 21:47:29 [restartedMain] ERROR o.s.boot.SpringApplication           : Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeInfoController': Unsatisfied dependency expressed through field 'employeeService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeInfoServiceImpl' defined in file [F:\workspace\sample-app\bin\main\jp\co\nttdmse\domain\service\impl\EmployeeInfoServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at jp.co.nttdmse.DemoApplication.main(DemoApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'employeeInfoServiceImpl' defined in file [F:\workspace\sample-app\bin\main\jp\co\nttdmse\domain\service\impl\EmployeeInfoServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312)
+	... 35 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	The import jp.co.nttdmse.domain.repository.EmployeeInfoMapper cannot be resolved
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+	EmployeeInfoMapper cannot be resolved to a type
+
+	at jp.co.nttdmse.domain.service.impl.EmployeeInfoServiceImpl.<init>(EmployeeInfoServiceImpl.java:20)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:200)
+	... 37 common frames omitted
+2020-02-21 22:21:43 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Starting DemoApplication on DESKTOP-I7F9DGF with PID 5520 (started by dungt in C:\Users\dungt\OneDrive\Máy tính\nttdatamse\sample-app)
+2020-02-21 22:21:43 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : The following profiles are active: postgres
+2020-02-21 22:21:43 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\dungt\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.0\c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6\jaxb-runtime-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-core-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/jaxb-api-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/txw2-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/istack-commons-runtime-3.0.5.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/stax-ex-1.7.8.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.0/c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6/FastInfoset-1.2.13.jar
+2020-02-21 22:21:43 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls       : The Class-Path manifest attribute in C:\Users\dungt\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-core\2.3.0\b40bc6ae4bc14480204e143377ce6f75ebba5066\jaxb-core-2.3.0.jar referenced one or more files that do not exist: file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/jaxb-api-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/txw2-2.3.0.jar,file:/C:/Users/dungt/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/2.3.0/b40bc6ae4bc14480204e143377ce6f75ebba5066/istack-commons-runtime-3.0.5.jar
+2020-02-21 22:21:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-21 22:21:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-21 22:21:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat initialized with port(s): 8080 (http)
+2020-02-21 22:21:44 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-21 22:21:44 [restartedMain] INFO  o.a.catalina.core.StandardService    : Starting service [Tomcat]
+2020-02-21 22:21:44 [restartedMain] INFO  o.a.catalina.core.StandardEngine     : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-21 22:21:44 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring embedded WebApplicationContext
+2020-02-21 22:21:44 [restartedMain] INFO  o.s.web.context.ContextLoader        : Root WebApplicationContext: initialization completed in 1168 ms
+2020-02-21 22:21:44 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Starting...
+2020-02-21 22:21:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Start completed.
+2020-02-21 22:21:45 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/sample_employee_info'
+2020-02-21 22:21:45 [restartedMain] INFO  c.g.d.core.DozerBeanMapperBuilder    : Initializing Dozer. Version: 6.5.0, Thread Name: restartedMain
+2020-02-21 22:21:45 [restartedMain] INFO  c.g.d.core.util.RuntimeUtils         : OSGi support is false
+2020-02-21 22:21:45 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2020-02-21 22:21:45 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2020-02-21 22:21:45 [restartedMain] WARN  c.g.d.core.el.ELExpressionFactory    : javax.el is not supported; Failed to resolve ExpressionFactory, com.sun.el.ExpressionFactoryImpl
+2020-02-21 22:21:45 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Using URL [file:/C:/Users/dungt/OneDrive/M%c3%a1y%20t%c3%adnh/nttdatamse/sample-app/bin/main/META-INF/dozer/configuration.dozer.xml] to load custom xml mappings
+2020-02-21 22:21:45 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Trying to resolve XML entity with public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 22:21:45 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Resolved public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 22:21:45 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Successfully loaded custom xml mapping.
+2020-02-21 22:21:46 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 22:21:46 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer   : LiveReload server is running on port 35729
+2020-02-21 22:21:46 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Starting ProtocolHandler ["http-nio-8080"]
+2020-02-21 22:21:46 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-21 22:21:46 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Started DemoApplication in 3.122 seconds (JVM running for 3.948)
+2020-02-21 22:21:52 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 22:21:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet    : Initializing Servlet 'dispatcherServlet'
+2020-02-21 22:21:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet    : Completed initialization in 10 ms
+2020-02-21 22:21:52 [http-nio-8080-exec-1] INFO  j.c.n.d.s.i.EmployeeInfoServiceImpl  : getEmployeeInfoList Start!
+2020-02-21 22:21:55 [http-nio-8080-exec-3] INFO  j.c.n.d.s.i.EmployeeInfoServiceImpl  : getEmployeeInfoList Start!
+2020-02-21 22:22:12 [Thread-7] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 22:22:12 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Shutdown initiated...
+2020-02-21 22:22:12 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-1 - Shutdown completed.
+2020-02-21 22:22:12 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Starting DemoApplication on DESKTOP-I7F9DGF with PID 5520 (started by dungt in C:\Users\dungt\OneDrive\Máy tính\nttdatamse\sample-app)
+2020-02-21 22:22:12 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : The following profiles are active: postgres
+2020-02-21 22:22:13 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry     : The MBean registry cannot be disabled because it has already been initialised
+2020-02-21 22:22:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat initialized with port(s): 8080 (http)
+2020-02-21 22:22:13 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Initializing ProtocolHandler ["http-nio-8080"]
+2020-02-21 22:22:13 [restartedMain] INFO  o.a.catalina.core.StandardService    : Starting service [Tomcat]
+2020-02-21 22:22:13 [restartedMain] INFO  o.a.catalina.core.StandardEngine     : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-21 22:22:13 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring embedded WebApplicationContext
+2020-02-21 22:22:13 [restartedMain] INFO  o.s.web.context.ContextLoader        : Root WebApplicationContext: initialization completed in 421 ms
+2020-02-21 22:22:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-2 - Starting...
+2020-02-21 22:22:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-2 - Start completed.
+2020-02-21 22:22:13 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/sample_employee_info'
+2020-02-21 22:22:13 [restartedMain] INFO  c.g.d.core.DozerBeanMapperBuilder    : Initializing Dozer. Version: 6.5.0, Thread Name: restartedMain
+2020-02-21 22:22:13 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2020-02-21 22:22:13 [restartedMain] INFO  c.g.d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2020-02-21 22:22:13 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Using URL [file:/C:/Users/dungt/OneDrive/M%c3%a1y%20t%c3%adnh/nttdatamse/sample-app/bin/main/META-INF/dozer/configuration.dozer.xml] to load custom xml mappings
+2020-02-21 22:22:13 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Trying to resolve XML entity with public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 22:22:13 [restartedMain] INFO  c.g.d.c.b.x.SchemaLSResourceResolver : Resolved public ID [null] and system ID [https://dozermapper.github.io/schema/bean-mapping.xsd]
+2020-02-21 22:22:13 [restartedMain] INFO  c.g.d.c.b.xml.BeanMappingXMLBuilder  : Successfully loaded custom xml mapping.
+2020-02-21 22:22:13 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-21 22:22:13 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer   : LiveReload server is running on port 35729
+2020-02-21 22:22:13 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol  : Starting ProtocolHandler ["http-nio-8080"]
+2020-02-21 22:22:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer     : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-21 22:22:13 [restartedMain] INFO  jp.co.nttdmse.DemoApplication        : Started DemoApplication in 1.054 seconds (JVM running for 31.456)
+2020-02-21 22:22:13 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-02-21 22:22:18 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-21 22:22:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet    : Initializing Servlet 'dispatcherServlet'
+2020-02-21 22:22:18 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet    : Completed initialization in 4 ms
+2020-02-21 22:22:18 [http-nio-8080-exec-1] INFO  j.c.n.d.s.i.EmployeeInfoServiceImpl  : getEmployeeInfoList Start!
+2020-02-21 22:22:26 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-02-21 22:22:26 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor       : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-21 22:22:26 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-2 - Shutdown initiated...
+2020-02-21 22:22:26 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource   : HikariPool-2 - Shutdown completed.

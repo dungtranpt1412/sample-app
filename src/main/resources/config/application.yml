@@ -1,0 +1,19 @@
+spring:
+  #プロファイルを指定しないで実行した場合、どのプロファイルで実行を行うか記載
+  profiles:
+    active: postgres #ここにプロファイル名を指定
+
+# Dozerの設定ファイル指定
+dozer:
+  mapping-files:
+  - classpath:META-INF/dozer/configuration.dozer.xml
+
+# Loggerの設定
+logging:
+  file: log/sampleApp
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %-36logger{36} : %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %-36logger{36} : %msg%n"
+  level:
+    root: info
+    jp.co.nttdmse: info
