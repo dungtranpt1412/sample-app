@@ -1,0 +1,14 @@
+spring:
+  #プロファイル名(変更する場合はファイル名のハイフン以下も変更してください)
+  profiles: postgres
+
+  #postgreSQL接続設定
+  datasource:
+     #ドライバー名
+     driver-class-name: org.postgresql.Driver
+     #接続URL           
+     url:  jdbc:postgresql://localhost:5432/sample_employee_info
+     #DBユーザー名
+     username: postgres
+     #DBパスワード
+     password: brycen!123 

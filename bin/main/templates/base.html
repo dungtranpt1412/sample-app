@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<link href="../css/sample.css" th:href="@{/css/sample.css}" rel="stylesheet"/>
+		<head th:fragment="title(title)">
+			<meta charset="UTF-8" />
+			<title th:text="${title}"></title>
+		</head>
+	<body>
+		<div th:fragment="menu">
+			<div class="menu">MENU!!!!!
+				<div><a th:href="@{/}">社員一覧</a></div>
+				<div><a th:href="@{/create}">新規登録</a></div>
+			</div>
+		</div>
+
+		<div th:fragment="header">
+			<div class="header">Header Zone!</div>
+		</div>
+
+		<div class="content">Content Zone!</div>
+
+		<div th:fragment="commonFooter">
+			<div class="footer">Footer Zone!</div>
+		</div>
+	</body>
+</html>

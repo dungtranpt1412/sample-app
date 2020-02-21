@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozermapper.github.io/schema/bean-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://dozermapper.github.io/schema/bean-mapping
+          https://dozermapper.github.io/schema/bean-mapping.xsd">
+
+    <mapping>
+      <class-a>jp.co.nttdmse.domain.entity.EmployeeInfo</class-a>
+      <class-b>jp.co.nttdmse.app.bean.EmployeeInfoBean</class-b>
+    </mapping>
+
+</mappings>

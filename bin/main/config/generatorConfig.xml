@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!--H2DB-->
+	<!-- ドライバのパス -->
+	<!-- <classPathEntry location="C:\Users\mtkzn11\.gradle\caches\modules-2\files-2.1\com.h2database\h2\1.4.200\3b5883b7a5a05b932c699760f0854ca565785a84\h2-1.4.200-sources.jar"/>
+	<context id="H2dbTables" targetRuntime="MyBatis3"> -->
+
+	    <!-- スキーマ情報を取得する DB への接続設定 -->
+	    <!-- <jdbcConnection driverClass="org.h2.Driver"
+	        connectionURL="jdbc:h2:C:\pleiades\h2db"
+	        userId="user"
+	        password="password">
+	    </jdbcConnection> -->
+
+	    <!--Java Model(Entity)クラスの生成先を指定します。
+	       targetPackage : 生成先パッケージ
+	       targetProject : プロジェクトディレクトリから生成先パッケージの親ディレクトリまでのパス-->
+	    <!-- <javaModelGenerator targetPackage="jp.co.nttdmse.entity" targetProject="demo/src/main/java">
+	      <property name="enableSubPackages" value="true" />
+	      <property name="trimStrings" value="true" />
+	    </javaModelGenerator> -->
+
+	    <!-- SQL Mapperファイルの生成先を指定します。
+	       targetPackage : 生成先パッケージ
+	       targetProject : プロジェクトディレクトリから生成先パッケージの親ディレクトリまでのパス-->
+	    <!-- <sqlMapGenerator targetPackage="jp.co.nttdmse.mapper" targetProject="demo/src/main/resources">
+	      <property name="enableSubPackages" value="true" />
+	    </sqlMapGenerator> -->
+
+	    <!-- Java Clientクラスの生成先を指定します。
+	       Java ClientはSQL Mapperファイルを呼び出すためのインターフェースクラスです。
+	       targetPackage : 生成先パッケージ
+	       targetProject : プロジェクトディレクトリから生成先パッケージの親ディレクトリまでのパス-->
+	    <!-- <javaClientGenerator type="XMLMAPPER" targetPackage="jp.co.nttdmse.mapper" targetProject="demo/src/main/java">
+	      <property name="enableSubPackages" value="true" />
+	    </javaClientGenerator> -->
+
+	     <!-- 自動生成対象のテーブル名を[tableName]に指定する -->
+		<!-- <table tableName="employee_list"></table>
+	</context> -->
+
+	<!--postgreSQL-->
+	<classPathEntry location="C:\Users\candy15s\.gradle\caches\modules-2\files-2.1\org.postgresql\postgresql\42.2.8\6f394c7df5600d11b221f356ff020440d2ece44f\postgresql-42.2.8.jar"/>
+		<context id="PostgresTables" targetRuntime="MyBatis3">
+
+	    <!-- スキーマ情報を取得する DB への接続設定 -->
+	    <jdbcConnection driverClass="org.postgresql.Driver"
+	        connectionURL="jdbc:postgresql://localhost:5432/sample_employee_info"
+	        userId="postgres"
+	        password="password">
+	    </jdbcConnection>
+
+	    <!--Java Modelクラスの生成先を指定します。
+	       targetPackage : 生成先パッケージ
+	       targetProject : プロジェクトディレクトリから生成先パッケージの親ディレクトリまでのパス-->
+	    <javaModelGenerator targetPackage="jp.co.nttdmse.domain.entity" targetProject="demo/src/main/java">
+	      <property name="enableSubPackages" value="true" />
+	      <property name="trimStrings" value="true" />
+	    </javaModelGenerator>
+
+	    <!-- SQL Mapperファイルの生成先を指定します。
+	       targetPackage : 生成先パッケージ
+	       targetProject : プロジェクトディレクトリから生成先パッケージの親ディレクトリまでのパス-->
+	    <sqlMapGenerator targetPackage="jp.co.nttdmse.domain.repository" targetProject="demo/src/main/resources">
+	      <property name="enableSubPackages" value="true" />
+	    </sqlMapGenerator>
+
+	    <!-- Java Clientクラスの生成先を指定します。
+	       Java ClientはSQL Mapperファイルを呼び出すためのインターフェースクラスです。
+	       targetPackage : 生成先パッケージ
+	       targetProject : プロジェクトディレクトリから生成先パッケージの親ディレクトリまでのパス-->
+	    <javaClientGenerator type="XMLMAPPER" targetPackage="jp.co.nttdmse.domain.repository" targetProject="demo/src/main/java">
+	      <property name="enableSubPackages" value="true" />
+	    </javaClientGenerator>
+
+		<!-- 自動生成対象のテーブル名を[tableName]に指定する -->
+		<table tableName="employee_info"></table>
+	</context>
+</generatorConfiguration>

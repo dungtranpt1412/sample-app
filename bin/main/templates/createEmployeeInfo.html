@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<link href="../css/sample.css" th:href="@{/css/sample.css}" rel="stylesheet"/>
+	<head th:replace="base::title(${title})"></head>
+	<body>
+	<div th:replace="base::menu"></div>
+	<div th:replace="base::header"></div>
+		<div class="content">
+			<!--/* Thymeleafのコメント形式 */-->
+			<h4>新規登録</h4>
+			<div class="error" th:errors="${createForm.*}">has error.</div>
+			<h4 class="error" th:text="${error}">create result</h4>
+			登録する社員情報を入力してください
+			<form th:action="@{/createExecute}" th:object=${createForm} method="post">
+				<table border="1">
+					<tr>
+						<th>ManNo.</th>
+						<th>名前</th>
+						<th>入社日</th>
+						<th>性別</th>
+						<th>在籍区分</th>
+						<th>時短勤務</th>
+					</tr>
+					<tr>
+						<!-- mannoはIntegerで受け取るため2147483647を越えるとParseできなくなるので最大値を画面側で指定 -->
+						<td><input type="number" th:max="999999" th:field="*{manno}"></td>
+						<td><input type="text" th:field="*{name}"></td>
+						<td><input type="date" th:field="*{joinDate}" placeholder="yyyy-mm-dd"></td>
+						<td>
+							<p class="radio-inline" th:each="item:${genderMap}">
+								<input type="radio" name="selectedItem"
+									th:value="${item.key}" th:text="${item.value}" th:field="*{sex}">
+							</p>
+						</td>
+						<td>
+							<select id="enrollmentType" name="enrollmentType">
+								<option th:each="item:${enrollmentTypeMap}" th:value="${item.key}"
+									th:text="${item.value}" th:selected="${item.key}==*{enrollmentType}">
+								</option>
+							</select>
+						</td>
+						<td><input type="checkbox" th:field="*{timeSaving}"></td>
+					</tr>
+				</table>
+				<button type="submit">登録</button>
+			</form>
+		</div>
+		<div th:replace="base::commonFooter"></div>
+	</body>
+</html>

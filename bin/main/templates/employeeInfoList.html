@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<link href="../css/sample.css" th:href="@{/css/sample.css}" rel="stylesheet"/>
+	<head th:replace="base::title(${title})"></head>
+	<body>
+	<div th:replace="base::menu"></div>
+	<div th:replace="base::header"></div>
+		<div class="content">
+			<!--/* Thymeleafのコメント形式 */-->
+			<h4 th:text="${success}">create result</h4>
+			<h4>社員情報</h4>
+			<div th:switch="!${#lists.isEmpty(formList)}">
+				<div th:case="true">
+					<table border="1">
+						<tr>
+							<th>ManNo.</th>
+							<th>名前</th>
+							<th>入社日</th>
+							<th>性別</th>
+							<th>在籍区分</th>
+							<th>時短勤務</th>
+						</tr>
+						<tr th:each="form : ${formList}">
+							<td th:text="${form.manno}"></td>
+							<td th:text="${form.name}"></td>
+							<td th:text="${#dates.format(form.joinDate, 'yyyy/MM/dd')}"></td>
+							<td th:text="${form.sex}"></td>
+							<td th:text="${form.enrollmentType}"></td>
+							<td th:if="${form.timeSaving}">○</td>
+							<td th:unless="${form.timeSaving}"></td>
+						</tr>
+					</table>
+				</div>
+				<div th:case="*">検索結果は0件です</div>
+			</div>
+		</div>
+		<div th:replace="base::commonFooter"></div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+body{
+	background: #CCFFFF;
+	margin: 0 0 0 0;
+}
+
+.header{
+	color: orange;
+	background: #FFFFCC;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 90%;
+	height: 10%;
+}
+
+.footer{
+	color: orange;
+	background: #FFFFCC;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	width: 90%;
+	height: 10%;
+}
+
+.menu{
+	color: red;
+	background: yellow;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 10%;
+	height: 100%;
+}
+
+.content{
+	padding: 5% 5% 10% 15%;
+}
+
+.radio-inline{
+	display:inline;
+}
+
+.error{
+	color: red;
+}

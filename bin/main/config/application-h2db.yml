@@ -1,0 +1,15 @@
+spring:
+  #プロファイル名(変更する場合はファイル名のハイフン以下も変更してください)
+  profiles: h2db
+
+  #H2DB接続設定
+  datasource:
+     #ドライバー名
+     driver-class-name: org.h2.Driver
+     #接続URL 
+     #環境に合わせて設定。下記はファイル形式で保持する設定。C:\pleiades\配下にh2db.mv.dbファイルが作成される
+     url: jdbc:h2:C:\pleiades\h2db
+     #DBユーザー名
+     username: user
+     #DBパスワード
+     password: password 
